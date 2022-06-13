@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.8 on win32)" generated="20220614 01:57:50.645" rpa="false" schemaversion="3">
+<suite id="s1" name="MPST01-01" source="E:\PycharmProjects\AndroidMoneyPlusTest\Tests\MPST01-01.robot">
+<test id="s1-t1" name="MPST01_01" line="54">
+<kw name="Open Money Plus">
+<msg timestamp="20220614 01:57:50.909" level="TRACE">Arguments: [  ]</msg>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.zotiger.accountbook</arg>
+<arg>appActivity=com.zotiger.accountbook.MainActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<msg timestamp="20220614 01:57:50.909" level="TRACE">Arguments: [ 'http://localhost:4723/wd/hub' | platformName='Android' | deviceName='emulator-5554' | appPackage='com.zotiger.accountbook' | appActivity='com.zotiger.accountbook.MainActivity' | automationName='Uiautomator2' ]</msg>
+<msg timestamp="20220614 01:57:52.947" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"firstMatch": [{"platformName": "Android", "appium:deviceName": "emulator-5554", "appium:appPackage": "com.zotiger.accountbook", "appium:appActivity": "com.zotiger.accountbook.MainActivity", "appium:automationName": "Uiautomator2"}]}, "desiredCapabilities": {"platformName": "Android", "deviceName": "emulator-5554", "appPackage": "com.zotiger.accountbook", "appActivity": "com.zotiger.accountbook.MainActivity", "automationName": "Uiautomator2"}}</msg>
+<msg timestamp="20220614 01:57:52.947" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg timestamp="20220614 01:58:02.042" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session HTTP/1.1" 200 936</msg>
+<msg timestamp="20220614 01:58:02.043" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:02.047" level="DEBUG">Opened application with session id 8e628f57-3e37-4e62-a6df-c8229b87ba32</msg>
+<msg timestamp="20220614 01:58:02.047" level="TRACE">Return: 1</msg>
+<status status="PASS" starttime="20220614 01:57:50.909" endtime="20220614 01:58:02.047"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${EDIT-ICON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:02.048" level="TRACE">Arguments: [ '//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]' ]</msg>
+<msg timestamp="20220614 01:58:02.048" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]"}</msg>
+<msg timestamp="20220614 01:58:02.757" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20220614 01:58:02.758" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:02.972" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]"}</msg>
+<msg timestamp="20220614 01:58:03.038" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20220614 01:58:03.039" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:03.253" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]"}</msg>
+<msg timestamp="20220614 01:58:03.291" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20220614 01:58:03.291" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:03.503" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]"}</msg>
+<msg timestamp="20220614 01:58:03.542" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20220614 01:58:03.543" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:03.751" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]"}</msg>
+<msg timestamp="20220614 01:58:03.792" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20220614 01:58:03.792" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:04.000" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]"}</msg>
+<msg timestamp="20220614 01:58:05.549" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:05.550" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:05.550" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-001b00000007/displayed {"id": "00000000-0000-005d-0000-001b00000007"}</msg>
+<msg timestamp="20220614 01:58:05.564" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-001b00000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:05.564" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:05.564" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:02.048" endtime="20220614 01:58:05.564"/>
+</kw>
+<msg timestamp="20220614 01:58:05.564" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:57:50.909" endtime="20220614 01:58:05.564"/>
+</kw>
+<kw name="Add New Expense For 900 Dollars">
+<msg timestamp="20220614 01:58:05.565" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${EDIT-ICON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:05.565" level="TRACE">Arguments: [ '//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]' ]</msg>
+<msg timestamp="20220614 01:58:05.565" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]"}</msg>
+<msg timestamp="20220614 01:58:05.654" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:05.654" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:05.654" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-001b00000007/displayed {"id": "00000000-0000-005d-0000-001b00000007"}</msg>
+<msg timestamp="20220614 01:58:05.666" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-001b00000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:05.666" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:05.666" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:05.565" endtime="20220614 01:58:05.666"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${EDIT-ICON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:05.666" level="TRACE">Arguments: [ '//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]' ]</msg>
+<msg timestamp="20220614 01:58:05.668" level="INFO">Clicking element '//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]'.</msg>
+<msg timestamp="20220614 01:58:05.669" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]"}</msg>
+<msg timestamp="20220614 01:58:05.761" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:05.762" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:05.762" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-001b00000007/click {"id": "00000000-0000-005d-0000-001b00000007"}</msg>
+<msg timestamp="20220614 01:58:05.786" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-001b00000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:05.786" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:05.786" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:05.666" endtime="20220614 01:58:05.786"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BOTTON9}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:05.786" level="TRACE">Arguments: [ "//android.widget.Button[@content-desc='9']" ]</msg>
+<msg timestamp="20220614 01:58:05.787" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='9']"}</msg>
+<msg timestamp="20220614 01:58:05.853" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20220614 01:58:05.853" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:06.055" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='9']"}</msg>
+<msg timestamp="20220614 01:58:07.362" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:07.362" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:07.362" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-004f00000007/displayed {"id": "00000000-0000-005d-0000-004f00000007"}</msg>
+<msg timestamp="20220614 01:58:07.379" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-004f00000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:07.379" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:07.379" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:05.786" endtime="20220614 01:58:07.379"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTTON9}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:07.380" level="TRACE">Arguments: [ "//android.widget.Button[@content-desc='9']" ]</msg>
+<msg timestamp="20220614 01:58:07.381" level="INFO">Clicking element '//android.widget.Button[@content-desc='9']'.</msg>
+<msg timestamp="20220614 01:58:07.381" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='9']"}</msg>
+<msg timestamp="20220614 01:58:07.464" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:07.465" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:07.465" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-004f00000007/click {"id": "00000000-0000-005d-0000-004f00000007"}</msg>
+<msg timestamp="20220614 01:58:07.484" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-004f00000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:07.485" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:07.485" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:07.380" endtime="20220614 01:58:07.485"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${ButtonMutiply}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:07.485" level="TRACE">Arguments: [ "//android.widget.Button[@content-desc='x']" ]</msg>
+<msg timestamp="20220614 01:58:07.487" level="INFO">Clicking element '//android.widget.Button[@content-desc='x']'.</msg>
+<msg timestamp="20220614 01:58:07.487" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='x']"}</msg>
+<msg timestamp="20220614 01:58:07.604" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:07.604" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:07.604" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-004900000007/click {"id": "00000000-0000-005d-0000-004900000007"}</msg>
+<msg timestamp="20220614 01:58:08.099" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-004900000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:08.099" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:08.099" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:07.485" endtime="20220614 01:58:08.099"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTTON1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:08.100" level="TRACE">Arguments: [ "//android.widget.Button[@content-desc='1']" ]</msg>
+<msg timestamp="20220614 01:58:08.101" level="INFO">Clicking element '//android.widget.Button[@content-desc='1']'.</msg>
+<msg timestamp="20220614 01:58:08.102" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='1']"}</msg>
+<msg timestamp="20220614 01:58:08.189" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:08.189" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:08.190" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-005b00000007/click {"id": "00000000-0000-005d-0000-005b00000007"}</msg>
+<msg timestamp="20220614 01:58:08.694" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-005b00000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:08.694" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:08.695" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:08.100" endtime="20220614 01:58:08.695"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTTON0}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:08.695" level="TRACE">Arguments: [ "//android.widget.Button[@content-desc='0']" ]</msg>
+<msg timestamp="20220614 01:58:08.697" level="INFO">Clicking element '//android.widget.Button[@content-desc='0']'.</msg>
+<msg timestamp="20220614 01:58:08.697" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='0']"}</msg>
+<msg timestamp="20220614 01:58:08.782" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:08.783" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:08.783" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-006500000007/click {"id": "00000000-0000-005d-0000-006500000007"}</msg>
+<msg timestamp="20220614 01:58:09.306" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-006500000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:09.306" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:09.306" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:08.695" endtime="20220614 01:58:09.306"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTTON0}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:09.307" level="TRACE">Arguments: [ "//android.widget.Button[@content-desc='0']" ]</msg>
+<msg timestamp="20220614 01:58:09.308" level="INFO">Clicking element '//android.widget.Button[@content-desc='0']'.</msg>
+<msg timestamp="20220614 01:58:09.309" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='0']"}</msg>
+<msg timestamp="20220614 01:58:09.912" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:09.912" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:09.912" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-006500000007/click {"id": "00000000-0000-005d-0000-006500000007"}</msg>
+<msg timestamp="20220614 01:58:09.935" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-006500000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:09.935" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:09.935" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:09.307" endtime="20220614 01:58:09.935"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CONFIRM}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:09.935" level="TRACE">Arguments: [ '//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView' ]</msg>
+<msg timestamp="20220614 01:58:09.937" level="INFO">Clicking element '//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView'.</msg>
+<msg timestamp="20220614 01:58:09.937" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView"}</msg>
+<msg timestamp="20220614 01:58:10.079" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:10.080" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:10.080" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-004700000007/click {"id": "00000000-0000-005d-0000-004700000007"}</msg>
+<msg timestamp="20220614 01:58:10.522" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-004700000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:10.522" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:10.522" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:09.935" endtime="20220614 01:58:10.522"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CONFIRM}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:10.523" level="TRACE">Arguments: [ '//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView' ]</msg>
+<msg timestamp="20220614 01:58:10.524" level="INFO">Clicking element '//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView'.</msg>
+<msg timestamp="20220614 01:58:10.525" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView"}</msg>
+<msg timestamp="20220614 01:58:10.599" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:10.600" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:10.600" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-004700000007/click {"id": "00000000-0000-005d-0000-004700000007"}</msg>
+<msg timestamp="20220614 01:58:11.094" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-004700000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:11.094" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:11.095" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:10.522" endtime="20220614 01:58:11.095"/>
+</kw>
+<msg timestamp="20220614 01:58:11.095" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:05.565" endtime="20220614 01:58:11.095"/>
+</kw>
+<kw name="Add New Expense For 900 Dollars By Daily Catogory By ChildMember">
+<msg timestamp="20220614 01:58:11.095" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${EDIT-ICON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:11.096" level="TRACE">Arguments: [ '//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]' ]</msg>
+<msg timestamp="20220614 01:58:11.096" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]"}</msg>
+<msg timestamp="20220614 01:58:12.203" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:12.203" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:12.203" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-001b00000007/displayed {"id": "00000000-0000-005d-0000-001b00000007"}</msg>
+<msg timestamp="20220614 01:58:12.216" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-001b00000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:12.216" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:12.217" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:11.096" endtime="20220614 01:58:12.217"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${EDIT-ICON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:12.217" level="TRACE">Arguments: [ '//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]' ]</msg>
+<msg timestamp="20220614 01:58:12.218" level="INFO">Clicking element '//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]'.</msg>
+<msg timestamp="20220614 01:58:12.219" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]"}</msg>
+<msg timestamp="20220614 01:58:12.278" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:12.279" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:12.279" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-001b00000007/click {"id": "00000000-0000-005d-0000-001b00000007"}</msg>
+<msg timestamp="20220614 01:58:12.299" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-001b00000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:12.299" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:12.299" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:12.217" endtime="20220614 01:58:12.299"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BOTTON9}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:12.299" level="TRACE">Arguments: [ "//android.widget.Button[@content-desc='9']" ]</msg>
+<msg timestamp="20220614 01:58:12.300" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='9']"}</msg>
+<msg timestamp="20220614 01:58:13.444" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:13.444" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:13.444" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-009500000007/displayed {"id": "00000000-0000-005d-0000-009500000007"}</msg>
+<msg timestamp="20220614 01:58:13.459" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-009500000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:13.459" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:13.459" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:12.299" endtime="20220614 01:58:13.459"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTTON9}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:13.459" level="TRACE">Arguments: [ "//android.widget.Button[@content-desc='9']" ]</msg>
+<msg timestamp="20220614 01:58:13.461" level="INFO">Clicking element '//android.widget.Button[@content-desc='9']'.</msg>
+<msg timestamp="20220614 01:58:13.461" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='9']"}</msg>
+<msg timestamp="20220614 01:58:13.519" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:13.519" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:13.520" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-009500000007/click {"id": "00000000-0000-005d-0000-009500000007"}</msg>
+<msg timestamp="20220614 01:58:13.543" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-009500000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:13.543" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:13.543" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:13.459" endtime="20220614 01:58:13.543"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${ButtonMutiply}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:13.543" level="TRACE">Arguments: [ "//android.widget.Button[@content-desc='x']" ]</msg>
+<msg timestamp="20220614 01:58:13.545" level="INFO">Clicking element '//android.widget.Button[@content-desc='x']'.</msg>
+<msg timestamp="20220614 01:58:13.546" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='x']"}</msg>
+<msg timestamp="20220614 01:58:14.178" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:14.178" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:14.178" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-008f00000007/click {"id": "00000000-0000-005d-0000-008f00000007"}</msg>
+<msg timestamp="20220614 01:58:14.202" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-008f00000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:14.202" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:14.202" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:13.543" endtime="20220614 01:58:14.203"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTTON1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:14.203" level="TRACE">Arguments: [ "//android.widget.Button[@content-desc='1']" ]</msg>
+<msg timestamp="20220614 01:58:14.204" level="INFO">Clicking element '//android.widget.Button[@content-desc='1']'.</msg>
+<msg timestamp="20220614 01:58:14.205" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='1']"}</msg>
+<msg timestamp="20220614 01:58:14.262" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:14.262" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:14.262" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00a100000007/click {"id": "00000000-0000-005d-0000-00a100000007"}</msg>
+<msg timestamp="20220614 01:58:14.787" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00a100000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:14.787" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:14.787" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:14.203" endtime="20220614 01:58:14.787"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTTON0}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:14.787" level="TRACE">Arguments: [ "//android.widget.Button[@content-desc='0']" ]</msg>
+<msg timestamp="20220614 01:58:14.790" level="INFO">Clicking element '//android.widget.Button[@content-desc='0']'.</msg>
+<msg timestamp="20220614 01:58:14.790" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='0']"}</msg>
+<msg timestamp="20220614 01:58:15.376" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:15.376" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:15.376" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00ab00000007/click {"id": "00000000-0000-005d-0000-00ab00000007"}</msg>
+<msg timestamp="20220614 01:58:15.392" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00ab00000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:15.392" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:15.393" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:14.787" endtime="20220614 01:58:15.393"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTTON0}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:15.393" level="TRACE">Arguments: [ "//android.widget.Button[@content-desc='0']" ]</msg>
+<msg timestamp="20220614 01:58:15.395" level="INFO">Clicking element '//android.widget.Button[@content-desc='0']'.</msg>
+<msg timestamp="20220614 01:58:15.395" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[@content-desc='0']"}</msg>
+<msg timestamp="20220614 01:58:15.967" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:15.967" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:15.967" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00ab00000007/click {"id": "00000000-0000-005d-0000-00ab00000007"}</msg>
+<msg timestamp="20220614 01:58:15.985" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00ab00000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:15.985" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:15.986" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:15.393" endtime="20220614 01:58:15.986"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Daily-Use-ICON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:15.986" level="TRACE">Arguments: [ "//android.widget.ImageView[contains(@content-desc,'日用')]" ]</msg>
+<msg timestamp="20220614 01:58:15.988" level="INFO">Clicking element '//android.widget.ImageView[contains(@content-desc,'日用')]'.</msg>
+<msg timestamp="20220614 01:58:15.988" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[contains(@content-desc,'\u65e5\u7528')]"}</msg>
+<msg timestamp="20220614 01:58:16.568" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:16.568" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:16.568" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00bd00000007/click {"id": "00000000-0000-005d-0000-00bd00000007"}</msg>
+<msg timestamp="20220614 01:58:16.588" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00bd00000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:16.589" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:16.589" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:15.986" endtime="20220614 01:58:16.589"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${ChangeMember}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:16.589" level="TRACE">Arguments: [ '//android.view.View[@index=6]/android.view.View[@index=0]/android.view.View[@index=0]/android.widget.ImageView[@index=0]' ]</msg>
+<msg timestamp="20220614 01:58:16.590" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=6]/android.view.View[@index=0]/android.view.View[@index=0]/android.widget.ImageView[@index=0]"}</msg>
+<msg timestamp="20220614 01:58:16.704" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:16.705" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:16.705" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-008700000007/displayed {"id": "00000000-0000-005d-0000-008700000007"}</msg>
+<msg timestamp="20220614 01:58:16.744" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-008700000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:16.744" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:16.744" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:16.589" endtime="20220614 01:58:16.744"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${ChangeMember}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:16.745" level="TRACE">Arguments: [ '//android.view.View[@index=6]/android.view.View[@index=0]/android.view.View[@index=0]/android.widget.ImageView[@index=0]' ]</msg>
+<msg timestamp="20220614 01:58:16.748" level="INFO">Clicking element '//android.view.View[@index=6]/android.view.View[@index=0]/android.view.View[@index=0]/android.widget.ImageView[@index=0]'.</msg>
+<msg timestamp="20220614 01:58:16.748" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=6]/android.view.View[@index=0]/android.view.View[@index=0]/android.widget.ImageView[@index=0]"}</msg>
+<msg timestamp="20220614 01:58:16.856" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:16.857" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:16.857" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-008700000007/click {"id": "00000000-0000-005d-0000-008700000007"}</msg>
+<msg timestamp="20220614 01:58:16.898" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-008700000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:16.898" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:16.899" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:16.745" endtime="20220614 01:58:16.899"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${ChildMember}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:16.899" level="TRACE">Arguments: [ "//android.widget.ImageView[@content-desc='子女']" ]</msg>
+<msg timestamp="20220614 01:58:16.899" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[@content-desc='\u5b50\u5973']"}</msg>
+<msg timestamp="20220614 01:58:17.913" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:17.913" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:17.913" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00d700000007/displayed {"id": "00000000-0000-005d-0000-00d700000007"}</msg>
+<msg timestamp="20220614 01:58:17.925" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00d700000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:17.926" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:17.926" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:16.899" endtime="20220614 01:58:17.926"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${ChildMember}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:17.926" level="TRACE">Arguments: [ "//android.widget.ImageView[@content-desc='子女']" ]</msg>
+<msg timestamp="20220614 01:58:17.928" level="INFO">Clicking element '//android.widget.ImageView[@content-desc='子女']'.</msg>
+<msg timestamp="20220614 01:58:17.928" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[@content-desc='\u5b50\u5973']"}</msg>
+<msg timestamp="20220614 01:58:17.962" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:17.963" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:17.963" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00d700000007/click {"id": "00000000-0000-005d-0000-00d700000007"}</msg>
+<msg timestamp="20220614 01:58:17.981" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00d700000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:17.981" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:17.981" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:17.926" endtime="20220614 01:58:17.981"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${CONFIRM}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:17.982" level="TRACE">Arguments: [ '//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView' ]</msg>
+<msg timestamp="20220614 01:58:17.982" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView"}</msg>
+<msg timestamp="20220614 01:58:19.060" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:19.060" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:19.060" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-008d00000007/displayed {"id": "00000000-0000-005d-0000-008d00000007"}</msg>
+<msg timestamp="20220614 01:58:19.070" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-008d00000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:19.071" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:19.071" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:17.982" endtime="20220614 01:58:19.071"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CONFIRM}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:19.071" level="TRACE">Arguments: [ '//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView' ]</msg>
+<msg timestamp="20220614 01:58:19.073" level="INFO">Clicking element '//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView'.</msg>
+<msg timestamp="20220614 01:58:19.073" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView"}</msg>
+<msg timestamp="20220614 01:58:19.128" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:19.129" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:19.129" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-008d00000007/click {"id": "00000000-0000-005d-0000-008d00000007"}</msg>
+<msg timestamp="20220614 01:58:19.148" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-008d00000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:19.148" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:19.148" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:19.071" endtime="20220614 01:58:19.148"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CONFIRM}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:19.148" level="TRACE">Arguments: [ '//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView' ]</msg>
+<msg timestamp="20220614 01:58:19.150" level="INFO">Clicking element '//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView'.</msg>
+<msg timestamp="20220614 01:58:19.151" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView"}</msg>
+<msg timestamp="20220614 01:58:19.741" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:19.741" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:19.742" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-008d00000007/click {"id": "00000000-0000-005d-0000-008d00000007"}</msg>
+<msg timestamp="20220614 01:58:19.761" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-008d00000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:19.761" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:19.761" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:19.148" endtime="20220614 01:58:19.761"/>
+</kw>
+<msg timestamp="20220614 01:58:19.761" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:11.095" endtime="20220614 01:58:19.761"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PICTURE-ICON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:19.762" level="TRACE">Arguments: [ "//android.widget.ImageView[contains(@content-desc,'圖表分析')]" ]</msg>
+<msg timestamp="20220614 01:58:19.763" level="INFO">Clicking element '//android.widget.ImageView[contains(@content-desc,'圖表分析')]'.</msg>
+<msg timestamp="20220614 01:58:19.763" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[contains(@content-desc,'\u5716\u8868\u5206\u6790')]"}</msg>
+<msg timestamp="20220614 01:58:20.837" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:20.837" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:20.837" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-002100000007/click {"id": "00000000-0000-005d-0000-002100000007"}</msg>
+<msg timestamp="20220614 01:58:20.860" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-002100000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:20.860" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:20.860" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:19.761" endtime="20220614 01:58:20.860"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${EatingItemInCatogoryExpenseOfPictrueAnalize}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:20.860" level="TRACE">Arguments: [ "//android.widget.ImageView[contains(@content-desc,'飲食')]" ]</msg>
+<msg timestamp="20220614 01:58:20.861" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[contains(@content-desc,'\u98f2\u98df')]"}</msg>
+<msg timestamp="20220614 01:58:21.780" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:21.780" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:21.780" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f200000007/displayed {"id": "00000000-0000-005d-0000-00f200000007"}</msg>
+<msg timestamp="20220614 01:58:21.799" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f200000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:21.799" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:21.799" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:20.860" endtime="20220614 01:58:21.799"/>
+</kw>
+<kw name="Element Attribute Should Match" library="AppiumLibrary">
+<arg>${EatingItemInCatogoryExpenseOfPictrueAnalize}</arg>
+<arg>content-desc</arg>
+<arg>飲食\n50.0 %\nNT$900</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<msg timestamp="20220614 01:58:21.800" level="TRACE">Arguments: [ "//android.widget.ImageView[contains(@content-desc,'飲食')]" | 'content-desc' | '飲食\n50.0 %\nNT$900' ]</msg>
+<msg timestamp="20220614 01:58:21.800" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[contains(@content-desc,'\u98f2\u98df')]"}</msg>
+<msg timestamp="20220614 01:58:21.862" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:21.862" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:21.862" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f200000007/attribute/content-desc {"name": "content-desc", "id": "00000000-0000-005d-0000-00f200000007"}</msg>
+<msg timestamp="20220614 01:58:21.922" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f200000007/attribute/content-desc HTTP/1.1" 200 34</msg>
+<msg timestamp="20220614 01:58:21.923" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:21.927" level="INFO">Element '//android.widget.ImageView[contains(@content-desc,'飲食')]' attribute 'content-desc' is '飲食
+50.0 %
+NT$900' </msg>
+<msg timestamp="20220614 01:58:21.928" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:21.800" endtime="20220614 01:58:21.928"/>
+</kw>
+<kw name="Element Attribute Should Match" library="AppiumLibrary">
+<arg>${DailyItemInCatogoryExpenseOfPictrueAnalize}</arg>
+<arg>content-desc</arg>
+<arg>日用\n50.0 %\nNT$900</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<msg timestamp="20220614 01:58:21.930" level="TRACE">Arguments: [ "//android.widget.ImageView[contains(@content-desc,'日用')]" | 'content-desc' | '日用\n50.0 %\nNT$900' ]</msg>
+<msg timestamp="20220614 01:58:21.930" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[contains(@content-desc,'\u65e5\u7528')]"}</msg>
+<msg timestamp="20220614 01:58:22.008" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:22.008" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:22.008" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f300000007/attribute/content-desc {"name": "content-desc", "id": "00000000-0000-005d-0000-00f300000007"}</msg>
+<msg timestamp="20220614 01:58:22.031" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f300000007/attribute/content-desc HTTP/1.1" 200 34</msg>
+<msg timestamp="20220614 01:58:22.031" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:22.034" level="INFO">Element '//android.widget.ImageView[contains(@content-desc,'日用')]' attribute 'content-desc' is '日用
+50.0 %
+NT$900' </msg>
+<msg timestamp="20220614 01:58:22.034" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:21.930" endtime="20220614 01:58:22.034"/>
+</kw>
+<kw name="Change To Account Expense Page">
+<msg timestamp="20220614 01:58:22.035" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DelayMenuButtonOfPictrueAnalize}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:22.035" level="TRACE">Arguments: [ "//android.view.View[contains(@content-desc,'顯示選單')]" ]</msg>
+<msg timestamp="20220614 01:58:22.038" level="INFO">Clicking element '//android.view.View[contains(@content-desc,'顯示選單')]'.</msg>
+<msg timestamp="20220614 01:58:22.038" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[contains(@content-desc,'\u986f\u793a\u9078\u55ae')]"}</msg>
+<msg timestamp="20220614 01:58:22.094" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:22.094" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:22.095" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00e400000007/click {"id": "00000000-0000-005d-0000-00e400000007"}</msg>
+<msg timestamp="20220614 01:58:22.127" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00e400000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:22.127" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:22.127" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:22.035" endtime="20220614 01:58:22.127"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${AccountExpenseInDelayMenuOfPictrueAnalize}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:22.128" level="TRACE">Arguments: [ "//android.widget.Button[contains(@content-desc,'帳戶支出')]" ]</msg>
+<msg timestamp="20220614 01:58:22.128" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[contains(@content-desc,'\u5e33\u6236\u652f\u51fa')]"}</msg>
+<msg timestamp="20220614 01:58:22.180" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20220614 01:58:22.181" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:22.385" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[contains(@content-desc,'\u5e33\u6236\u652f\u51fa')]"}</msg>
+<msg timestamp="20220614 01:58:22.895" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:22.896" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:22.896" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00fa00000007/displayed {"id": "00000000-0000-005d-0000-00fa00000007"}</msg>
+<msg timestamp="20220614 01:58:22.909" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00fa00000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:22.909" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:22.909" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:22.127" endtime="20220614 01:58:22.909"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${AccountExpenseInDelayMenuOfPictrueAnalize}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:22.910" level="TRACE">Arguments: [ "//android.widget.Button[contains(@content-desc,'帳戶支出')]" ]</msg>
+<msg timestamp="20220614 01:58:22.912" level="INFO">Clicking element '//android.widget.Button[contains(@content-desc,'帳戶支出')]'.</msg>
+<msg timestamp="20220614 01:58:22.912" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[contains(@content-desc,'\u5e33\u6236\u652f\u51fa')]"}</msg>
+<msg timestamp="20220614 01:58:22.940" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:22.940" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:22.940" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00fa00000007/click {"id": "00000000-0000-005d-0000-00fa00000007"}</msg>
+<msg timestamp="20220614 01:58:22.962" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00fa00000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:22.962" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:22.963" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:22.910" endtime="20220614 01:58:22.963"/>
+</kw>
+<msg timestamp="20220614 01:58:22.963" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:22.034" endtime="20220614 01:58:22.963"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${DefaultAccountItemINAccountExpenseOfPictrueAnalize}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:22.963" level="TRACE">Arguments: [ '//android.widget.ImageView[@content-desc="默認帳戶\n100.0 %\nNT$1,800"]' ]</msg>
+<msg timestamp="20220614 01:58:22.964" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[@content-desc=\"\u9ed8\u8a8d\u5e33\u6236\n100.0 %\nNT$1,800\"]"}</msg>
+<msg timestamp="20220614 01:58:23.019" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20220614 01:58:23.019" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:23.234" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[@content-desc=\"\u9ed8\u8a8d\u5e33\u6236\n100.0 %\nNT$1,800\"]"}</msg>
+<msg timestamp="20220614 01:58:23.842" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:23.842" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:23.843" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f200000007/displayed {"id": "00000000-0000-005d-0000-00f200000007"}</msg>
+<msg timestamp="20220614 01:58:23.893" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f200000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:23.893" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:23.894" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:22.963" endtime="20220614 01:58:23.894"/>
+</kw>
+<kw name="Element Attribute Should Match" library="AppiumLibrary">
+<arg>${DefaultAccountItemINAccountExpenseOfPictrueAnalize}</arg>
+<arg>content-desc</arg>
+<arg>默認帳戶\n100.0 %\nNT$1,800</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<msg timestamp="20220614 01:58:23.894" level="TRACE">Arguments: [ '//android.widget.ImageView[@content-desc="默認帳戶\n100.0 %\nNT$1,800"]' | 'content-desc' | '默認帳戶\n100.0 %\nNT$1,800' ]</msg>
+<msg timestamp="20220614 01:58:23.895" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[@content-desc=\"\u9ed8\u8a8d\u5e33\u6236\n100.0 %\nNT$1,800\"]"}</msg>
+<msg timestamp="20220614 01:58:23.951" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:23.951" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:23.951" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f200000007/attribute/content-desc {"name": "content-desc", "id": "00000000-0000-005d-0000-00f200000007"}</msg>
+<msg timestamp="20220614 01:58:23.978" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f200000007/attribute/content-desc HTTP/1.1" 200 43</msg>
+<msg timestamp="20220614 01:58:23.979" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:23.981" level="INFO">Element '//android.widget.ImageView[@content-desc="默認帳戶
+100.0 %
+NT$1,800"]' attribute 'content-desc' is '默認帳戶
+100.0 %
+NT$1,800' </msg>
+<msg timestamp="20220614 01:58:23.981" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:23.894" endtime="20220614 01:58:23.981"/>
+</kw>
+<kw name="Change To Member Expense Page">
+<msg timestamp="20220614 01:58:23.981" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${DelayMenuButtonOfPictrueAnalize}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:23.982" level="TRACE">Arguments: [ "//android.view.View[contains(@content-desc,'顯示選單')]" ]</msg>
+<msg timestamp="20220614 01:58:23.983" level="INFO">Clicking element '//android.view.View[contains(@content-desc,'顯示選單')]'.</msg>
+<msg timestamp="20220614 01:58:23.983" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.view.View[contains(@content-desc,'\u986f\u793a\u9078\u55ae')]"}</msg>
+<msg timestamp="20220614 01:58:24.045" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:24.046" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:24.046" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00e400000007/click {"id": "00000000-0000-005d-0000-00e400000007"}</msg>
+<msg timestamp="20220614 01:58:24.085" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00e400000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:24.085" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:24.085" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:23.981" endtime="20220614 01:58:24.085"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${MemberExpenseInDelayMenuOfPictrueAnalize}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:24.085" level="TRACE">Arguments: [ "//android.widget.Button[contains(@content-desc,'成員支出')]" ]</msg>
+<msg timestamp="20220614 01:58:24.086" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[contains(@content-desc,'\u6210\u54e1\u652f\u51fa')]"}</msg>
+<msg timestamp="20220614 01:58:24.134" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20220614 01:58:24.134" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:24.334" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[contains(@content-desc,'\u6210\u54e1\u652f\u51fa')]"}</msg>
+<msg timestamp="20220614 01:58:24.834" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:24.834" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:24.835" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-010200000007/displayed {"id": "00000000-0000-005d-0000-010200000007"}</msg>
+<msg timestamp="20220614 01:58:24.847" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-010200000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:24.847" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:24.847" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:24.085" endtime="20220614 01:58:24.847"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${MemberExpenseInDelayMenuOfPictrueAnalize}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 01:58:24.847" level="TRACE">Arguments: [ "//android.widget.Button[contains(@content-desc,'成員支出')]" ]</msg>
+<msg timestamp="20220614 01:58:24.849" level="INFO">Clicking element '//android.widget.Button[contains(@content-desc,'成員支出')]'.</msg>
+<msg timestamp="20220614 01:58:24.849" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.Button[contains(@content-desc,'\u6210\u54e1\u652f\u51fa')]"}</msg>
+<msg timestamp="20220614 01:58:24.884" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:24.884" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:24.884" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-010200000007/click {"id": "00000000-0000-005d-0000-010200000007"}</msg>
+<msg timestamp="20220614 01:58:24.901" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-010200000007/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:24.901" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:24.901" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:24.847" endtime="20220614 01:58:24.901"/>
+</kw>
+<msg timestamp="20220614 01:58:24.902" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:23.981" endtime="20220614 01:58:24.902"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${MyselfInAccountExpenseOfPictrueAnalize}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220614 01:58:24.902" level="TRACE">Arguments: [ '//android.widget.ImageView[contains(@content-desc,"自己")]' ]</msg>
+<msg timestamp="20220614 01:58:24.902" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[contains(@content-desc,\"\u81ea\u5df1\")]"}</msg>
+<msg timestamp="20220614 01:58:25.789" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:25.789" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:25.789" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f200000007/displayed {"id": "00000000-0000-005d-0000-00f200000007"}</msg>
+<msg timestamp="20220614 01:58:25.812" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f200000007/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20220614 01:58:25.813" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:25.813" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:24.902" endtime="20220614 01:58:25.813"/>
+</kw>
+<kw name="Element Attribute Should Match" library="AppiumLibrary">
+<arg>${MyselfInAccountExpenseOfPictrueAnalize}</arg>
+<arg>content-desc</arg>
+<arg>自己\n50.0 %\nNT$900</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<msg timestamp="20220614 01:58:25.814" level="TRACE">Arguments: [ '//android.widget.ImageView[contains(@content-desc,"自己")]' | 'content-desc' | '自己\n50.0 %\nNT$900' ]</msg>
+<msg timestamp="20220614 01:58:25.815" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[contains(@content-desc,\"\u81ea\u5df1\")]"}</msg>
+<msg timestamp="20220614 01:58:25.879" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:25.879" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:25.879" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f200000007/attribute/content-desc {"name": "content-desc", "id": "00000000-0000-005d-0000-00f200000007"}</msg>
+<msg timestamp="20220614 01:58:25.923" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-00f200000007/attribute/content-desc HTTP/1.1" 200 34</msg>
+<msg timestamp="20220614 01:58:25.923" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:25.927" level="INFO">Element '//android.widget.ImageView[contains(@content-desc,"自己")]' attribute 'content-desc' is '自己
+50.0 %
+NT$900' </msg>
+<msg timestamp="20220614 01:58:25.927" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:25.814" endtime="20220614 01:58:25.927"/>
+</kw>
+<kw name="Element Attribute Should Match" library="AppiumLibrary">
+<arg>${ChildItem}</arg>
+<arg>content-desc</arg>
+<arg>子女\n50.0 %\nNT$900</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<msg timestamp="20220614 01:58:25.928" level="TRACE">Arguments: [ '//android.widget.ImageView[contains(@content-desc,"子女")]' | 'content-desc' | '子女\n50.0 %\nNT$900' ]</msg>
+<msg timestamp="20220614 01:58:25.929" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements {"using": "xpath", "value": "//android.widget.ImageView[contains(@content-desc,\"\u5b50\u5973\")]"}</msg>
+<msg timestamp="20220614 01:58:25.991" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20220614 01:58:25.991" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:25.991" level="DEBUG">GET http://127.0.0.1:4723/wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-010300000007/attribute/content-desc {"name": "content-desc", "id": "00000000-0000-005d-0000-010300000007"}</msg>
+<msg timestamp="20220614 01:58:26.009" level="DEBUG">http://127.0.0.1:4723 "GET /wd/hub/session/8e628f57-3e37-4e62-a6df-c8229b87ba32/element/00000000-0000-005d-0000-010300000007/attribute/content-desc HTTP/1.1" 200 34</msg>
+<msg timestamp="20220614 01:58:26.010" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220614 01:58:26.014" level="INFO">Element '//android.widget.ImageView[contains(@content-desc,"子女")]' attribute 'content-desc' is '子女
+50.0 %
+NT$900' </msg>
+<msg timestamp="20220614 01:58:26.014" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220614 01:58:25.928" endtime="20220614 01:58:26.014"/>
+</kw>
+<status status="PASS" starttime="20220614 01:57:50.908" endtime="20220614 01:58:26.015"/>
+</test>
+<doc>分析支出</doc>
+<status status="PASS" starttime="20220614 01:57:50.650" endtime="20220614 01:58:26.016"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="MPST01-01">MPST01-01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.6 on win32)" generated="20220614 03:00:13.666" rpa="false" schemaversion="3">
+<suite id="s1" name="MPST01-09" source="C:\Users\4a5g0\Desktop\課程\一下\ST\Phase4\AndroidMoneyPlusTest\Tests\MPST01-09.robot">
+<test id="s1-t1" name="MPST01_02" line="41">
+<kw name="Open Money Plus">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.zotiger.accountbook</arg>
+<arg>appActivity=com.zotiger.accountbook.MainActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220614 03:00:13.966" endtime="20220614 03:00:26.763"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${EDIT-ICON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220614 03:00:26.763" endtime="20220614 03:00:30.952"/>
+</kw>
+<status status="PASS" starttime="20220614 03:00:13.965" endtime="20220614 03:00:30.953"/>
+</kw>
+<kw name="Add New Income For 900 Dollars By Price Catogory By ChildMember">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${EDIT-ICON}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220614 03:00:30.954" endtime="20220614 03:00:31.095"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${EDIT-ICON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:31.097" level="INFO">Clicking element '//android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]'.</msg>
+<status status="PASS" starttime="20220614 03:00:31.095" endtime="20220614 03:00:31.266"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${IncomePageButtonInEdit}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220614 03:00:31.266" endtime="20220614 03:00:33.099"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${IncomePageButtonInEdit}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:33.104" level="INFO">Clicking element '//android.view.View[@content-desc="收入"]/android.widget.ImageView[2]'.</msg>
+<status status="PASS" starttime="20220614 03:00:33.100" endtime="20220614 03:00:33.238"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BOTTON9}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220614 03:00:33.238" endtime="20220614 03:00:35.078"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTTON9}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:35.083" level="INFO">Clicking element '//android.widget.Button[@content-desc='9']'.</msg>
+<status status="PASS" starttime="20220614 03:00:35.079" endtime="20220614 03:00:35.298"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${ButtonMutiply}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:35.304" level="INFO">Clicking element '//android.widget.Button[@content-desc='x']'.</msg>
+<status status="PASS" starttime="20220614 03:00:35.299" endtime="20220614 03:00:37.626"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTTON1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:37.632" level="INFO">Clicking element '//android.widget.Button[@content-desc='1']'.</msg>
+<status status="PASS" starttime="20220614 03:00:37.626" endtime="20220614 03:00:37.781"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTTON0}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:37.784" level="INFO">Clicking element '//android.widget.Button[@content-desc='0']'.</msg>
+<status status="PASS" starttime="20220614 03:00:37.781" endtime="20220614 03:00:38.398"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BOTTON0}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:38.401" level="INFO">Clicking element '//android.widget.Button[@content-desc='0']'.</msg>
+<status status="PASS" starttime="20220614 03:00:38.398" endtime="20220614 03:00:39.021"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PRICE-ICON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:39.024" level="INFO">Clicking element '//android.widget.ImageView[contains(@content-desc,'獎金')]'.</msg>
+<status status="PASS" starttime="20220614 03:00:39.021" endtime="20220614 03:00:39.618"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${ChangeMember}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220614 03:00:39.619" endtime="20220614 03:00:39.782"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${ChangeMember}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:39.788" level="INFO">Clicking element '//android.view.View[@index=6]/android.view.View[@index=0]/android.view.View[@index=0]/android.widget.ImageView[@index=0]'.</msg>
+<status status="PASS" starttime="20220614 03:00:39.783" endtime="20220614 03:00:39.968"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${ChildMember}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220614 03:00:39.968" endtime="20220614 03:00:40.975"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${ChildMember}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:40.978" level="INFO">Clicking element '//android.widget.ImageView[@content-desc='子女']'.</msg>
+<status status="PASS" starttime="20220614 03:00:40.975" endtime="20220614 03:00:41.036"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${CONFIRM}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220614 03:00:41.037" endtime="20220614 03:00:42.147"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CONFIRM}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:42.149" level="INFO">Clicking element '//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220614 03:00:42.147" endtime="20220614 03:00:42.261"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CONFIRM}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:42.264" level="INFO">Clicking element '//android.view.View[@index=6]/android.view.View/android.view.View[@index=3]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20220614 03:00:42.261" endtime="20220614 03:00:42.851"/>
+</kw>
+<status status="PASS" starttime="20220614 03:00:30.953" endtime="20220614 03:00:42.852"/>
+</kw>
+<kw name="Click Expend">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${ChildItem}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220614 03:00:42.853" endtime="20220614 03:00:43.929"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${ChildItem}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220614 03:00:43.933" level="INFO">Clicking element '//android.widget.ImageView[contains(@content-desc,"子女")]'.</msg>
+<status status="PASS" starttime="20220614 03:00:43.929" endtime="20220614 03:00:44.008"/>
+</kw>
+<status status="PASS" starttime="20220614 03:00:42.853" endtime="20220614 03:00:44.008"/>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<arg>${ChildItemInfo}</arg>
+<arg>content-desc</arg>
+<arg>獎金 +NT$900</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220614 03:00:44.014" level="INFO">Verifying element '//android.widget.ImageView[contains(@content-desc,"子女")]' contains text 'content-desc'.</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220614 03:00:45.776" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220614 03:00:45.359" endtime="20220614 03:00:45.776"/>
+</kw>
+<msg timestamp="20220614 03:00:45.777" level="FAIL">StaleElementReferenceException: Message: Cached elements 'By.xpath: //android.widget.ImageView[contains(@content-desc,"子女")]' do not exist in DOM anymore
+</msg>
+<status status="FAIL" starttime="20220614 03:00:44.009" endtime="20220614 03:00:45.781"/>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<arg>${ChildItemInfo}</arg>
+<arg>content-desc</arg>
+<arg>成員: 子女</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20220614 03:00:45.782" endtime="20220614 03:00:45.782"/>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<arg>${ChildItemInfo}</arg>
+<arg>content-desc</arg>
+<arg>帳戶: 默認帳戶</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20220614 03:00:45.782" endtime="20220614 03:00:45.782"/>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<arg>${ChildItemInfo}</arg>
+<arg>content-desc</arg>
+<arg>帳本: 默認帳本</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20220614 03:00:45.783" endtime="20220614 03:00:45.783"/>
+</kw>
+<status status="FAIL" starttime="20220614 03:00:13.965" endtime="20220614 03:00:45.783">StaleElementReferenceException: Message: Cached elements 'By.xpath: //android.widget.ImageView[contains(@content-desc,"子女")]' do not exist in DOM anymore
+</status>
+</test>
+<doc>檢視收支紀錄</doc>
+<status status="FAIL" starttime="20220614 03:00:13.669" endtime="20220614 03:00:45.785"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="MPST01-09">MPST01-09</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
