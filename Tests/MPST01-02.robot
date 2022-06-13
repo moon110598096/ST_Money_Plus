@@ -2,6 +2,7 @@
 Documentation    分析收入
 Library  AppiumLibrary
 Resource    ./Variables.txt
+Resource    ./Keywords.txt
 *** Variables ***
 ${PICTURE-ICON}    //android.widget.ImageView[contains(@content-desc,'圖表分析')]
 ${IncomePageButtonInEdit}       //android.view.View[@content-desc="收入"]/android.widget.ImageView[2]
@@ -16,10 +17,6 @@ ${MyselfItem}   //android.widget.ImageView[contains(@content-desc,"自己")]
 ${ChildItem}   //android.widget.ImageView[contains(@content-desc,"子女")]
 
 *** Keywords ***
-Open Money Plus
-    Open Application    http://localhost:4723/wd/hub    platformName=Android	deviceName=emulator-5554    appPackage=com.zotiger.accountbook    appActivity=com.zotiger.accountbook.MainActivity    automationName=Uiautomator2
-    Wait Until Element Is Visible    ${EDIT-ICON}
-
 Add New Income For 900 Dollars
     Wait Until Element Is Visible    ${EDIT-ICON}
     Click Element    ${EDIT-ICON}
