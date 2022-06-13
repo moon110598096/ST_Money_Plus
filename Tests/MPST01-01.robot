@@ -2,14 +2,12 @@
 Documentation    分析支出
 Library  AppiumLibrary
 Resource    ./Variables.txt
+Resource    ./Keywords.txt
 *** Variables ***
 ${PICTURE-ICON}    //android.widget.ImageView[contains(@content-desc,'圖表分析')]
 ${ChildItem}        //android.widget.ImageView[contains(@content-desc,"子女")]
 
 *** Keywords ***
-Open Money Plus
-    Open Application    http://localhost:4723/wd/hub    platformName=Android	deviceName=emulator-5554    appPackage=com.zotiger.accountbook    appActivity=com.zotiger.accountbook.MainActivity    automationName=Uiautomator2
-    Wait Until Element Is Visible    ${EDIT-ICON}
 
 Add New Expense For 900 Dollars
     Wait Until Element Is Visible    ${EDIT-ICON}
