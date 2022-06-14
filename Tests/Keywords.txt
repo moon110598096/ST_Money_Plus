@@ -10,3 +10,5 @@ Click
     Wait Until Page Contains Element  ${element}
     Click Element    ${element}
 
+Close Money Plus
+    Quit Application
