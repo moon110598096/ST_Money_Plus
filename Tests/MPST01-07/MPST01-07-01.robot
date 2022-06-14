@@ -54,7 +54,7 @@ Click Expend
     Click Element    ${ChildItem}
 
 *** Test Cases ***
-MPST01_09_HappyPath
+MPST01_07_HappyPath
     Add New Income For 900 Dollars By Price Catogory By ChildMember
     Click Expend
     Wait Until Element Is Visible    ${ItemInfo}
