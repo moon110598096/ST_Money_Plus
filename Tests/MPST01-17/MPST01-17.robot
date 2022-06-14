@@ -1,7 +1,8 @@
 *** Settings ***
 Documentation    管理帳本
 Library  AppiumLibrary
-Resource    ../Variables.txt
+Resource    ./../Variables.txt
+Resource    ./../Keywords.txt
 
 *** Variables ***
 ${settingButton}    //android.widget.ImageView[@content-desc="設置\n第 4 個標籤，總共 4 個"]
@@ -13,6 +14,9 @@ ${addLedgerPage}    //android.view.View[@content-desc="添加帳本"]
 ${ledgerNameInput}    //android.view.View[@content-desc="圖標"]/preceding-sibling::android.widget.ImageView
 ${addLedgerDoneButton}    //android.view.View[@content-desc="添加帳本"]/following-sibling::android.widget.Button
 ${newLedger}    //android.widget.ImageView[@content-desc="test"]
+${iconButton}    //android.view.View[@content-desc="圖標"]/child::android.widget.ImageView[2]
+${chooseIcon}    //android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.ImageView[8]
+# ${chooseIcon}    //android.widget.Button[@content-desc="返回"]/../following-sibling::android.view.View/child::android.widget.ImageView[8]
 
 *** Keywords ***
 Open Money Plus
@@ -33,10 +37,14 @@ Add New Ledger
     Press Keycode    47
     Press Keycode    48
     Press Keycode    66
+    Click Element    ${iconButton}
+    Sleep    3
+    Click Element   ${chooseIcon}
+    Wait Until Element Is Visible    ${addLedgerPage}
     Click Element    ${addLedgerDoneButton}
-    Wait Until Element Is Visible    ${newLedger}
+    Page Should Contain Element    ${newLedger}
 
 *** Test Cases ***
 MPST01_17
     Open Money Plus
-    Press Setting Button
+    Add New Ledger
