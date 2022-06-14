@@ -8,6 +8,13 @@ ${PRICE-ICON}    //android.widget.ImageView[contains(@content-desc,'獎金')]
 ${PART-TIME-ICON}    //android.widget.ImageView[contains(@content-desc,'兼職')]
 ${Daily-Use-ICON}    //android.widget.ImageView[contains(@content-desc,'日用')]
 
+${AnalysisCatogory-Outcome}
+${AnalysisCatogory-Income}
+${AnalysisCatogory-Budge}       //android.view.View[contains(@content-desc,'預算')]
+${AnalysisCatogory-Outcome-Income-Trend}    //android.view.View[contains(@content-desc,'收支趨勢')]
+${AnalysisCatogory-Assets-Trend}
+
+
 ${Catogory-Diet}    //android.widget.ImageView[contains(@content-desc,"飲食")]
 ${Catogory-Daily-Use}    //android.widget.ImageView[contains(@content-desc,"日用")]
 ${Catogory-Transportation}    //android.widget.ImageView[contains(@content-desc,"交通")]
