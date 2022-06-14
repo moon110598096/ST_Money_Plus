@@ -1,34 +1,12 @@
 *** Settings ***
 Documentation    分析支出
 Library  AppiumLibrary
-Resource    ./../Variables.txt
-Resource    ./../Keywords.txt
+
+Resource    ../Variables.txt
+Resource    ../Keywords.txt
 *** Variables ***
 ${PICTURE-ICON}    //android.widget.ImageView[contains(@content-desc,"圖表分析")]
 ${ChildItem}        //android.widget.ImageView[contains(@content-desc,"子女")]
-
-
-${Catogory-Diet}    //android.widget.ImageView[contains(@content-desc,"飲食")]
-${Catogory-Daily-Use}    //android.widget.ImageView[contains(@content-desc,"日用")]
-${Catogory-Transportation}    //android.widget.ImageView[contains(@content-desc,"交通")]
-${Catogory-Social-Contact}    //android.widget.ImageView[contains(@content-desc,"社交")]
-${Catogory-House}    //android.widget.ImageView[contains(@content-desc,"住房物業")]
-${Catogory-Present}    //android.widget.ImageView[contains(@content-desc,"禮物")]
-${Catogory-Communication}    //android.widget.ImageView[contains(@content-desc,"通信")]
-${Catogory-Clothes}    //android.widget.ImageView[contains(@content-desc,"服飾")]
-${Catogory-Entertainment}    //android.widget.ImageView[contains(@content-desc,"娛樂")]
-${Catogory-Cosmetic}    //android.widget.ImageView[contains(@content-desc,"美容")]
-${Catogory-Medical}    //android.widget.ImageView[contains(@content-desc,"醫療")]
-${Catogory-Tax}    //android.widget.ImageView[contains(@content-desc,"稅金")]
-
-#${Catogory-Diet-Delete}    //android.widget.ImageView[contains(@content-desc,"飲食 自己 -NT$900 默認帳戶")]
-
-${Member-Self}    //android.widget.ImageView[contains(@content-desc,"自己")]
-${Member-Wife}    //android.widget.ImageView[contains(@content-desc,"老婆")]
-${Member-Husband}    //android.widget.ImageView[contains(@content-desc,"老公")]
-${Member-Child}    //android.widget.ImageView[contains(@content-desc,"子女")]
-${Member-Parent}    //android.widget.ImageView[contains(@content-desc,"父母")]
-${Member-Family}    //android.widget.ImageView[contains(@content-desc,"家庭")]
 
 *** Keywords ***
 
