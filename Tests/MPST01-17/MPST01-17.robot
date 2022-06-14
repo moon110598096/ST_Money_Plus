@@ -19,7 +19,7 @@ Open Money Plus
     Open Application    http://localhost:4723/wd/hub    platformName=Android	deviceName=emulator-5554    appPackage=com.zotiger.accountbook    appActivity=com.zotiger.accountbook.MainActivity    automationName=Uiautomator2
     Wait Until Element Is Visible    ${EDIT-ICON}
 
-Press Setting Button
+Add New Ledger
     Click Element    ${settingButton}
     Wait Until Element Is Visible    ${settingPage}
     Click Element    ${ledgerButton}
