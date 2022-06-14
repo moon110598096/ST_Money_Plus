@@ -12,7 +12,7 @@ ${AnalysisCatogory-Outcome}
 ${AnalysisCatogory-Income}
 ${AnalysisCatogory-Budge}       //android.view.View[contains(@content-desc,'預算')]
 ${AnalysisCatogory-Outcome-Income-Trend}    //android.view.View[contains(@content-desc,'收支趨勢')]
-${AnalysisCatogory-Assets-Trend}
+${AnalysisCatogory-Assets-Trend}     //android.view.View[contains(@content-desc,'資產趨勢')]
 
 
 ${Catogory-Diet}    //android.widget.ImageView[contains(@content-desc,"飲食")]
