@@ -13,17 +13,23 @@ ${ChildItem}   //android.widget.ImageView[contains(@content-desc,"子女")]
 ${ChildItemInfo}   //android.view.View[@index=0]/android.widget.ImageView[contains(@content-desc,"默認帳本")]/android.widget.Button[1]/..
 
 *** Keywords ***
-Add New Income For 900 Dollars By Price Catogory By ChildMember
+Add New Income For Negative Float Dollars By Price Catogory By ChildMember
     Wait Until Element Is Visible    ${EDIT-ICON}
     Click Element    ${EDIT-ICON}
     Wait Until Element Is Visible    ${IncomePageButtonInEdit}
     Click Element    ${IncomePageButtonInEdit}
     Wait Until Element Is Visible    ${BOTTON9}
     Click Element    ${BOTTON9}
-    Click Element    ${ButtonMutiply}
-    Click Element    ${BOTTON1}
-    Click Element    ${BOTTON0}
-    Click Element    ${BOTTON0}
+    Click Element    ${BOTTON9}
+    Click Element    ${BOTTONDot}
+    Click Element    ${BOTTON7}
+    Click Element    ${ButtonSub}
+    Click Element    ${BOTTON9}
+    Click Element    ${BOTTON9}
+    Click Element    ${BOTTON9}
+    Click Element    ${BOTTONDot}
+    Click Element    ${BOTTON9}
+    
     Click Element    ${PRICE-ICON}
     Wait Until Element Is Visible    ${ChangeMember}
     Click Element    ${ChangeMember}
@@ -39,13 +45,13 @@ Click Expend
 
 
 *** Test Cases ***
-MPST01_09_HappyPath
-    Add New Income For 900 Dollars By Price Catogory By ChildMember
+MPST01_09_With_Negative_Float_Number
+    Add New Income For Negative Float Dollars By Price Catogory By ChildMember
     Click Expend
     Wait Until Element Is Visible    ${ChildItemInfo}
     ${info} =  Get Element Attribute  ${ChildItemInfo}  content-desc
     ${info} =  Replace String	${info}  \n  ${space}  
-    Should Be True    "獎金 +NT$900" in "${info}"
+    Should Be True    "獎金 +NT$0" in "${info}"
     Should Be True    "成員: 子女" in "${info}"
     Should Be True    "帳戶: 默認帳戶" in "${info}"
     Should Be True    "帳本: 默認帳本" in "${info}"
