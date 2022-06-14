@@ -2,8 +2,8 @@
 Documentation    檢視收支紀錄
 Library  AppiumLibrary
 Library  String
-Resource    ./Variables.txt
-Resource    ./Keywords.txt
+Resource    ./../Variables.txt
+Resource    ./../Keywords.txt
 Test Setup    Open Money Plus
 Test Teardown    Close Money Plus
 

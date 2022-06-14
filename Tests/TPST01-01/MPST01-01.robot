@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation    分析支出
 Library  AppiumLibrary
-Resource    ./Variables.txt
-Resource    ./Keywords.txt
+Resource    ./../Variables.txt
+Resource    ./../Keywords.txt
 *** Variables ***
 ${PICTURE-ICON}    //android.widget.ImageView[contains(@content-desc,"圖表分析")]
 ${ChildItem}        //android.widget.ImageView[contains(@content-desc,"子女")]

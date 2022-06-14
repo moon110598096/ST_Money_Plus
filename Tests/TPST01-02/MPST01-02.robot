@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation    分析收入
 Library  AppiumLibrary
-Resource    ./Variables.txt
-Resource    ./Keywords.txt
+Resource    ./../Variables.txt
+Resource    ./../Keywords.txt
 *** Variables ***
 ${PICTURE-ICON}    //android.widget.ImageView[contains(@content-desc,'圖表分析')]
 ${IncomePageButtonInEdit}       //android.view.View[@content-desc="收入"]/android.widget.ImageView[2]
