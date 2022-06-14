@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    管理帳本
 Library  AppiumLibrary
-Resource    ./Variables.txt
+Resource    ../Variables.txt
 
 *** Variables ***
 ${settingButton}    //android.widget.ImageView[@content-desc="設置\n第 4 個標籤，總共 4 個"]

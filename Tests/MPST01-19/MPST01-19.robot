@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    查詢帳單
 Library  AppiumLibrary
-Resource    ./Variables.txt
+Resource    ../Variables.txt
 
 *** Variables ***
 ${IncomePageButtonInEdit}       //android.view.View[@content-desc="收入"]/android.widget.ImageView[2]
