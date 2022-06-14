@@ -29,7 +29,7 @@ Add 900 Dollars By Different Type
     Enter 900 Dollars
 
 *** Test Cases ***
-MPST01_01
+MPST01_05
     #Happy path
     Open Money Plus
 

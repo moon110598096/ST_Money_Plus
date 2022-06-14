@@ -19,6 +19,7 @@ ${returnButton}    //android.widget.Button[@content-desc="返回"]
 ${mainPageButton}    //android.widget.ImageView[@content-desc="記帳本\n第 1 個標籤，總共 4 個"]
 ${mainPage}    //android.view.View[@content-desc="帳單\n帳單"]
 ${mainPageBudget}    //android.view.View[@content-desc="月預算\nNT$900"]
+${mainPageFailureBudget}    //android.view.View[@content-desc="月預算\nNT$9999999999999999999999999999999999999999"]
 ${analysisButton}    //android.widget.ImageView[@content-desc="圖表分析\n第 3 個標籤，總共 4 個"]
 ${analysisPage}    //android.view.View[@content-desc="圖表分析"]
 ${budgetTabButton}    //android.view.View[@content-desc="預算"]
@@ -72,7 +73,30 @@ Add New Budget
     Page Should Contain Element    ${dietBudgetInBudgetPage}
     Page Should Contain Element    ${giftBudgetInBudgetPage}
 
+Add New Budget Failure
+    Click Element    ${settingButton}
+    Wait Until Element Is Visible    ${settingPage}
+    Click Element    ${budgetButton}
+    Wait Until Element Is Visible    ${budgetPage}
+    Click Element    ${ledgerBudget}
+    Wait Until Element Is Visible    ${ledgerBudgetEdit
+    FOR  ${Index}  IN RANGE  40
+        Press Keycode    16
+    END
+    Click Element    ${addBudgetDone}
+    Wait Until Element Is Visible    ${budgetPage}
+    Click Element    ${returnButton}
+    Wait Until Element Is Visible    ${settingPage}
+    Click Element    ${mainPageButton}
+    Wait Until Element Is Visible    ${mainPage}
+    Page Should Contain Element    ${mainPageFailureBudget}
+    Click Element    ${analysisButton}
 *** Test Cases ***
 MPST01_16
     Open Money Plus
     Add New Budget
+
+MPST01_16_Failure
+    [Tags]    Failure
+    Open Money Plus
+    Add New Budget Failure
