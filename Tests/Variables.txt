@@ -1,5 +1,5 @@
 *** Variables ***
-${EDIT-ICON}    //android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]
+${EDIT-ICON}    //android.view.View[@content-desc="默認帳本"]/../following-sibling::android.widget.ImageView
 ${ACCOUNT-ICON}    //android.widget.ImageView[contains(@content-desc,'記帳本')]
 ${PICTURE-ICON}    //android.widget.ImageView[contains(@content-desc,'圖表分析')]
 ${INCOME-ICON}    //android.view.View[@content-desc='收入']//android.widget.ImageView[@index=0]
@@ -68,3 +68,4 @@ ${MemberExpenseInDelayMenuOfPictrueAnalize}    //android.widget.Button[contains(
 ${DefaultAccountItemINAccountExpenseOfPictrueAnalize}      //android.widget.ImageView[@content-desc="默認帳戶\n100.0 %\nNT$1,800"]
 
 ${MyselfInAccountExpenseOfPictrueAnalize}       //android.widget.ImageView[contains(@content-desc,"自己")]
+${SettingPage}      //android.widget.ImageView[@content-desc="設置\n第 4 個標籤，總共 4 個"]

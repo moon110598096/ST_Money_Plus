@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    檢視收支紀錄
+Documentation    修改收支紀錄
 Library  AppiumLibrary
 Library  String
 Resource    ../Variables.txt

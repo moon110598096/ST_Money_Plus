@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    分析支出
 Library  AppiumLibrary
+
 Resource    ../Variables.txt
 Resource    ../Keywords.txt
 *** Variables ***
