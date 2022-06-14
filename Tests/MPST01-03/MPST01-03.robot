@@ -9,24 +9,50 @@ Test Teardown    Close Money Plus
 ${PICTURE-ICON}    //android.widget.ImageView[contains(@content-desc,'圖表分析')]
 ${ChildItem}        //android.widget.ImageView[contains(@content-desc,"子女")]
 ${BudgetSetting}    //android.widget.ImageView[@content-desc="預算設定"]
+
 ${DietBudgetSetting}    //android.widget.ImageView[contains(@content-desc,"飲食")]
 ${DietBudgetSettingEditText}    //android.view.View[@content-desc="飲食"]/following-sibling::android.widget.EditText
+
 ${DailyBudgetSettingEditText}    //android.view.View[@content-desc="日用"]/following-sibling::android.widget.EditText
 ${DailyBudgetSetting}    //android.widget.ImageView[contains(@content-desc,"日用")]
+
 ${BudgetSettingConfirm}     //android.widget.Button[@content-desc="確定"]
 ${AnnualBudgetPage}      //android.view.View[@content-desc="年預算"]
 ${WeekBudgetPage}      //android.view.View[@content-desc="週預算"]
 ${BudgetPage-ChartAnalysis}     //android.view.View[@content-desc="預算"]
-${Diet-BugdetChartAnalysis}     //android.widget.ImageView[contains(@content-desc,'飲食')]
 
+${Diet-BugdetChartAnalysis}     //android.widget.ImageView[contains(@content-desc,'飲食')]
 ${Daily-BugdetChartAnalysis}     //android.widget.ImageView[contains(@content-desc,"日用")]
+
 ${GO-BACK-BUTTON}      //android.widget.Button[@content-desc="返回"]
 ${SmallMenuButton}   //android.view.View[contains(@content-desc,'顯示選單')]
 ${AnnualBudgetInMenu}       //android.widget.Button[@content-desc="年預算"]
 ${WeekBudgetInMenu}       //android.widget.Button[@content-desc="週預算"]
-#${Chart}    //android.view.View[@content-desc="0%\n0 / 1,500"]
 ${Chart}    //android.view.View[contains(@content-desc," / ")]
+
+@{ExpenseCategory}  飲食  日用  交通  社交  住房物業    禮物  通信  服飾  娛樂  美容  醫療  稅金  教育  寶寶  寵物  旅行
+#  飲食  日用  交通  社交  住房物業    禮物  通信  服飾  娛樂  美容  醫療  稅金  教育  寶寶  寵物  旅行
 *** Keywords ***
+Add New Expense For 900 Dollars By Myself
+    [Arguments]     @{catogory}
+
+    FOR     ${index}    ${item}     IN ENUMERATE  @{catogory}
+        ${SelectedCatogory} =   Set Variable            //android.widget.ImageView[contains(@content-desc,'${item}')]
+        Wait Until Element Is Visible    ${EDIT-ICON}
+        Click Element    ${EDIT-ICON}
+        Wait Until Element Is Visible    ${BOTTON9}
+        Click Element    ${BOTTON9}
+        Click Element    ${ButtonMutiply}
+        Click Element    ${BOTTON1}
+        Click Element    ${BOTTON0}
+        Click Element    ${BOTTON0}
+        Run Keyword If    ${index} > 11
+        ...    Swipe    521    1149    0    -300
+        Click Element    ${SelectedCatogory}
+        Click Element    ${EQUAL}
+        Click Element    ${CONFIRM}
+    END
+
 
 Add New Expense For 900 Dollars By Diet Catogory By Myself
     Wait Until Element Is Visible    ${EDIT-ICON}
@@ -91,7 +117,8 @@ Change To Week Budget Page In Budget Chart Anaylisis
     Wait Until Element Is Visible    ${WeekBudgetInMenu}
     Click Element    ${WeekBudgetInMenu}
 *** Test Cases ***
-MPST01_01
+MPST01_03_01
+    [Tags]  HappyPath
     Add New Expense For 900 Dollars By Diet Catogory By Myself
     Add New Expense For 100 Dollars By Daily Catogory By ChildMember
     Wait Until Element Is Visible       ${SettingPage}
@@ -146,3 +173,7 @@ MPST01_01
 
     Wait Until Element Is Visible    ${Chart}
     Element Attribute Should Match      ${Chart}    content-desc    133%\n1,000 / 750
+
+MPST01_03_02
+    [Tags]  T2
+    Add New Expense For 900 Dollars By Myself   @{ExpenseCategory}

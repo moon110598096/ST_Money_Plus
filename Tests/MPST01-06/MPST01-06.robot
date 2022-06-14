@@ -1,8 +1,9 @@
 *** Settings ***
 Documentation    新增收支紀錄
 Library  AppiumLibrary
-Resource    ./../Variables.txt
-Resource    ./../Keywords.txt
+
+Resource    ../Variables.txt
+Resource    ../Keywords.txt
 *** Variables ***
 
 *** Keywords ***
