@@ -43,13 +43,13 @@ MPST01_01
 
     Click    ${PICTURE-ICON}
 
-    Click    ${AnalysisCatogory-Outcome-Income-Trend}
+    Click    ${AnalysisCatogory-Assets-Trend}
 
 
     Wait Until Element Is Visible    ${total}
     Wait Until Page Contains Element  ${total}
 
-    Element Attribute Should Match    ${total}     content-desc    總額\nNT$1,800\nNT$2,700\n-NT$900
-    Element Attribute Should Match    ${0614}     content-desc    06-14\nNT$1,800\nNT$2,700\n-NT$900
+    Element Attribute Should Match    ${total}     content-desc    總額\n-NT$900\n-NT$900
+    Element Attribute Should Match    ${0614}     content-desc    06-14\n-NT$900\n-NT$900
 
 
