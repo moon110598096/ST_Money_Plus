@@ -79,7 +79,7 @@ Add New Budget Failure
     Click Element    ${budgetButton}
     Wait Until Element Is Visible    ${budgetPage}
     Click Element    ${ledgerBudget}
-    Wait Until Element Is Visible    ${ledgerBudgetEdit
+    Wait Until Element Is Visible    ${ledgerBudgetEdit}
     FOR  ${Index}  IN RANGE  40
         Press Keycode    16
     END

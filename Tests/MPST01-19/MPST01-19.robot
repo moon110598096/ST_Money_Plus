@@ -46,6 +46,7 @@ Search for income with correct keyword
     Press Keycode    7
     Press Keycode    7
     Press Keycode    66
+    Sleep    3
     Page Should Contain Element    ${searchResult}
 
 Search for income with incorrect keyword
@@ -56,6 +57,7 @@ Search for income with incorrect keyword
     Press Keycode    7
     Press Keycode    7
     Press Keycode    66
+    Sleep    3
     Page Should Contain Element    ${failedSearchResult}
 
 *** Test Cases ***
