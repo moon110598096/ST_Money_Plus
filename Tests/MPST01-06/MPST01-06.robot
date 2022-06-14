@@ -49,20 +49,17 @@ MPST01-06
 
     ChangeMember
 
-    Enter900Money
-
-
-#    Wait Until Element Is Visible    ${BOTTON9}
-#    Click Element    ${BOTTON9}
-#    Click Element    ${ButtonMutiply}
-#    Click Element    ${BOTTON1}
-#    Click Element    ${BOTTON0}
-#    Click Element    ${BOTTON0}
-#    Click Element    ${CONFIRM}
-#    Click Element    ${CONFIRM}
-#    Wait Until Element Is Visible    ${RESULT}
-#    Element Attribute Should Match    ${RESULT}    content-desc    獎金\n子女\n+NT$900\n默認帳戶
-#    Click Element    ${RESULT}
-#    Wait Until Element Is Visible    ${ResultInDetail}
-#    Element Attribute Should Match    ${ResultInDetail}    content-desc    ${ExpectedContentDescInRsultInDetal}
+    Wait Until Element Is Visible    ${BOTTON9}
+    Click Element    ${BOTTON9}
+    Click Element    ${ButtonMutiply}
+    Click Element    ${BOTTON1}
+    Click Element    ${BOTTON0}
+    Click Element    ${BOTTON0}
+    Click Element    ${CONFIRM}
+    Click Element    ${CONFIRM}
+    Wait Until Element Is Visible    ${RESULT}
+    Element Attribute Should Match    ${RESULT}    content-desc    獎金\n子女\n+NT$900\n默認帳戶
+    Click Element    ${RESULT}
+    Wait Until Element Is Visible    ${ResultInDetail}
+    Element Attribute Should Match    ${ResultInDetail}    content-desc    ${ExpectedContentDescInRsultInDetal}
 
