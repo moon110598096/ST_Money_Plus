@@ -14,7 +14,6 @@ ${Catogory-Transportation}    //android.widget.ImageView[contains(@content-desc,
 ${Catogory-Social-Contact}    //android.widget.ImageView[contains(@content-desc,"社交")]
 ${Catogory-House}    //android.widget.ImageView[contains(@content-desc,"住房物業")]
 ${Catogory-Present}    //android.widget.ImageView[contains(@content-desc,"禮物")]
-
 ${Catogory-Communication}    //android.widget.ImageView[contains(@content-desc,"通信")]
 ${Catogory-Clothes}    //android.widget.ImageView[contains(@content-desc,"服飾")]
 ${Catogory-Entertainment}    //android.widget.ImageView[contains(@content-desc,"娛樂")]
@@ -22,7 +21,14 @@ ${Catogory-Cosmetic}    //android.widget.ImageView[contains(@content-desc,"美�
 ${Catogory-Medical}    //android.widget.ImageView[contains(@content-desc,"醫療")]
 ${Catogory-Tax}    //android.widget.ImageView[contains(@content-desc,"稅金")]
 
-${Catogory-Diet-Delete}    //android.widget.ImageView[contains(@content-desc,"飲食 自己 -NT$900 默認帳戶")]
+#${Catogory-Diet-Delete}    //android.widget.ImageView[contains(@content-desc,"飲食 自己 -NT$900 默認帳戶")]
+
+${Member-Self}    //android.widget.ImageView[contains(@content-desc,"自己")]
+${Member-Wife}    //android.widget.ImageView[contains(@content-desc,"老婆")]
+${Member-Husband}    //android.widget.ImageView[contains(@content-desc,"老公")]
+${Member-Child}    //android.widget.ImageView[contains(@content-desc,"子女")]
+${Member-Parent}    //android.widget.ImageView[contains(@content-desc,"父母")]
+${Member-Family}    //android.widget.ImageView[contains(@content-desc,"家庭")]
 
 *** Keywords ***
 
@@ -78,6 +84,21 @@ Add New Expense For 900 Dollars By Different Catogory
     Click Element    ${Catogory}
     Enter 900 Dollars
 
+Add New Expense For 900 Dollars By Different Member
+    [Arguments]    ${Member}
+
+    Wait Until Element Is Visible    ${ACCOUNT-ICON}
+    Click Element    ${ACCOUNT-ICON}
+    Wait Until Element Is Visible    ${EDIT-ICON}
+    Click Element    ${EDIT-ICON}
+
+    Wait Until Element Is Visible    ${ChangeMember}
+    Click Element    ${ChangeMember}
+
+    Wait Until Element Is Visible    ${Member}
+    Click Element    ${Member}
+    Enter 900 Dollars
+
 
 
 Change To Account Expense Page
@@ -116,10 +137,10 @@ MPST01_01
     Element Attribute Should Match    ${MyselfInAccountExpenseOfPictrueAnalize}     content-desc    自己\n50.0 %\nNT$900
     Element Attribute Should Match    ${ChildItem}     content-desc    子女\n50.0 %\nNT$900
 
-#TEST
-#    Open Money Plus
-#    Add New Expense For 900 Dollars By Different Catogory     Catogory=${Catogory-Diet}
-#    Delete    ${Catogory-Diet}
+TEST
+    Open Money Plus
+    Add New Expense For 900 Dollars By Different Catogory     Catogory=${Catogory-Diet}
+    Delete    ${Catogory-Diet}
 
 MPST01_01_Catogory_ECC_1
     Open Money Plus
@@ -231,3 +252,70 @@ MPST01_01_Catogory_ECC_2
     Element Attribute Should Match    ${Catogory-Cosmetic}    content-desc    美容\n16.7 %\nNT$900
     Element Attribute Should Match    ${Catogory-Medical}    content-desc    醫療\n16.7 %\nNT$900
     Element Attribute Should Match    ${Catogory-Tax}    content-desc    稅金\n16.7 %\nNT$900
+
+MPST01_01_Catogory_ECC_3
+
+    Open Money Plus
+
+    Add New Expense For 900 Dollars By Different Member     Member=${Member-Self}
+
+    Click    ${PICTURE-ICON}
+    Wait Until Page Contains Element  ${Catogory-Diet}
+    Change To Member Expense Page
+    Wait Until Element Is Visible    ${Member-Self}
+    Element Attribute Should Match    ${Member-Self}     content-desc    自己\n100.0 %\nNT$900
+
+    Add New Expense For 900 Dollars By Different Member     Member=${Member-Wife}
+
+    Click    ${PICTURE-ICON}
+    Wait Until Page Contains Element  ${Catogory-Diet}
+    Change To Member Expense Page
+    Wait Until Element Is Visible    ${Member-Self}
+    Element Attribute Should Match    ${Member-Self}     content-desc    自己\n50.0 %\nNT$900
+    Element Attribute Should Match    ${Member-Wife}     content-desc    老婆\n50.0 %\nNT$900
+
+    Add New Expense For 900 Dollars By Different Member     Member=${Member-Husband}
+
+    Click    ${PICTURE-ICON}
+    Wait Until Page Contains Element  ${Catogory-Diet}
+    Change To Member Expense Page
+    Wait Until Element Is Visible    ${Member-Self}
+    Element Attribute Should Match    ${Member-Self}     content-desc    自己\n33.3 %\nNT$900
+    Element Attribute Should Match    ${Member-Wife}     content-desc    老婆\n33.3 %\nNT$900
+    Element Attribute Should Match    ${Member-Husband}     content-desc    老公\n33.3 %\nNT$900
+
+    Add New Expense For 900 Dollars By Different Member     Member=${Member-Child}
+
+    Click    ${PICTURE-ICON}
+    Wait Until Page Contains Element  ${Catogory-Diet}
+    Change To Member Expense Page
+    Wait Until Element Is Visible    ${Member-Self}
+    Element Attribute Should Match    ${Member-Self}     content-desc    自己\n25.0 %\nNT$900
+    Element Attribute Should Match    ${Member-Wife}     content-desc    老婆\n25.0 %\nNT$900
+    Element Attribute Should Match    ${Member-Husband}     content-desc    老公\n25.0 %\nNT$900
+    Element Attribute Should Match    ${Member-Child}      content-desc    子女\n25.0 %\nNT$900
+
+    Add New Expense For 900 Dollars By Different Member     Member=${Member-Parent}
+
+    Click    ${PICTURE-ICON}
+    Wait Until Page Contains Element  ${Catogory-Diet}
+    Change To Member Expense Page
+    Wait Until Element Is Visible    ${Member-Self}
+    Element Attribute Should Match    ${Member-Self}     content-desc    自己\n20.0 %\nNT$900
+    Element Attribute Should Match    ${Member-Wife}     content-desc    老婆\n20.0 %\nNT$900
+    Element Attribute Should Match    ${Member-Husband}     content-desc    老公\n20.0 %\nNT$900
+    Element Attribute Should Match    ${Member-Child}      content-desc    子女\n20.0 %\nNT$900
+    Element Attribute Should Match    ${Member-Parent}      content-desc    父母\n20.0 %\nNT$900
+
+    Add New Expense For 900 Dollars By Different Member     Member=${Member-Family}
+
+    Click    ${PICTURE-ICON}
+    Wait Until Page Contains Element  ${Catogory-Diet}
+    Change To Member Expense Page
+    Wait Until Element Is Visible    ${Member-Self}
+    Element Attribute Should Match    ${Member-Self}     content-desc    自己\n16.7 %\nNT$900
+    Element Attribute Should Match    ${Member-Wife}     content-desc    老婆\n16.7 %\nNT$900
+    Element Attribute Should Match    ${Member-Husband}     content-desc    老公\n16.7 %\nNT$900
+    Element Attribute Should Match    ${Member-Child}      content-desc    子女\n16.7 %\nNT$900
+    Element Attribute Should Match    ${Member-Parent}      content-desc    父母\n16.7 %\nNT$900
+    Element Attribute Should Match    ${Member-Family}      content-desc    家庭\n16.7 %\nNT$900
