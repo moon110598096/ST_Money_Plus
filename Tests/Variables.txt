@@ -1,5 +1,5 @@
 *** Variables ***
-${EDIT-ICON}    //android.view.View[@index=0]/android.widget.ImageView[string-length(@content-desc)=0]
+${EDIT-ICON}    //android.view.View[@content-desc="默認帳本"]/../following-sibling::android.widget.ImageView
 ${ACCOUNT-ICON}    //android.widget.ImageView[contains(@content-desc,'記帳本')]
 ${PICTURE-ICON}    //android.widget.ImageView[contains(@content-desc,'圖表分析')]
 ${INCOME-ICON}    //android.view.View[@content-desc='收入']//android.widget.ImageView[@index=0]
@@ -7,6 +7,27 @@ ${EXPENSE-ICON}    //android.view.View[contains(@content-desc,'支出')]//androi
 ${PRICE-ICON}    //android.widget.ImageView[contains(@content-desc,'獎金')]
 ${PART-TIME-ICON}    //android.widget.ImageView[contains(@content-desc,'兼職')]
 ${Daily-Use-ICON}    //android.widget.ImageView[contains(@content-desc,'日用')]
+
+${Catogory-Diet}    //android.widget.ImageView[contains(@content-desc,"飲食")]
+${Catogory-Daily-Use}    //android.widget.ImageView[contains(@content-desc,"日用")]
+${Catogory-Transportation}    //android.widget.ImageView[contains(@content-desc,"交通")]
+${Catogory-Social-Contact}    //android.widget.ImageView[contains(@content-desc,"社交")]
+${Catogory-House}    //android.widget.ImageView[contains(@content-desc,"住房物業")]
+${Catogory-Present}    //android.widget.ImageView[contains(@content-desc,"禮物")]
+${Catogory-Communication}    //android.widget.ImageView[contains(@content-desc,"通信")]
+${Catogory-Clothes}    //android.widget.ImageView[contains(@content-desc,"服飾")]
+${Catogory-Entertainment}    //android.widget.ImageView[contains(@content-desc,"娛樂")]
+${Catogory-Cosmetic}    //android.widget.ImageView[contains(@content-desc,"美容")]
+${Catogory-Medical}    //android.widget.ImageView[contains(@content-desc,"醫療")]
+${Catogory-Tax}    //android.widget.ImageView[contains(@content-desc,"稅金")]
+
+${Member-Self}    //android.widget.ImageView[contains(@content-desc,"自己")]
+${Member-Wife}    //android.widget.ImageView[contains(@content-desc,"老婆")]
+${Member-Husband}    //android.widget.ImageView[contains(@content-desc,"老公")]
+${Member-Child}    //android.widget.ImageView[contains(@content-desc,"子女")]
+${Member-Parent}    //android.widget.ImageView[contains(@content-desc,"父母")]
+${Member-Family}    //android.widget.ImageView[contains(@content-desc,"家庭")]
+
 ${ChangeDate}    //android.widget.Button[@content-desc='TODAY']
 ${DATE0613}    //android.view.View[@content-desc='13, 2022年6月13日星期一']
 ${DateConfirm}    //android.widget.Button[@content-desc='確定']
@@ -47,3 +68,4 @@ ${MemberExpenseInDelayMenuOfPictrueAnalize}    //android.widget.Button[contains(
 ${DefaultAccountItemINAccountExpenseOfPictrueAnalize}      //android.widget.ImageView[@content-desc="默認帳戶\n100.0 %\nNT$1,800"]
 
 ${MyselfInAccountExpenseOfPictrueAnalize}       //android.widget.ImageView[contains(@content-desc,"自己")]
+${SettingPage}      //android.widget.ImageView[@content-desc="設置\n第 4 個標籤，總共 4 個"]
