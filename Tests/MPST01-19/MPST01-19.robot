@@ -1,7 +1,7 @@
 *** Settings ***
-Documentation    檢視收支紀錄
+Documentation    查詢帳單
 Library  AppiumLibrary
-Resource    ./Variables.txt
+Resource    ../Variables.txt
 
 *** Variables ***
 ${IncomePageButtonInEdit}       //android.view.View[@content-desc="收入"]/android.widget.ImageView[2]
@@ -47,7 +47,7 @@ Click Search Button
     Wait Until Element Is Visible    ${searchResult}
 
 *** Test Cases ***
-MPST01_02
+MPST01_19
     Open Money Plus
     Add New Income For 900 Dollars By Price Catogory By ChildMember
     Click Search Button
