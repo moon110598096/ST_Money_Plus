@@ -1,3 +1,5 @@
+*** Settings ***
+Library  AppiumLibrary
 *** Keywords ***
 
 Open Money Plus
@@ -6,8 +8,9 @@ Open Money Plus
 
 Click
     [Arguments]    ${element}
-    Wait Until Element Is Visible    ${element}
     Wait Until Page Contains Element  ${element}
+    Wait Until Element Is Visible    ${element}
+
     Click Element    ${element}
 
 Close Money Plus
