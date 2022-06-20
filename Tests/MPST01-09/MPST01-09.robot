@@ -153,6 +153,7 @@ Add New Income For Zero Float Dollars By Default Catogory And ChildMember
     Click    ${CONFIRM}
 
 Click Expend
+    Wait Until Page Contains Element    ${ChildItem}
     Wait Until Element Is Visible    ${ChildItem}
     Click Element    ${ChildItem}
 
@@ -165,6 +166,7 @@ MPST01_09_HappyPath
     [tags]    Happy_Path
     Add New Income For Defualt Dollars By Defualt Catogory And Defualt Member And Not Using Operator
     Click Expend
+    Wait Until Page Contains Element    ${ChildItemInfo}
     Wait Until Element Is Visible    ${ChildItemInfo}
     ${info} =  Get Element Attribute  ${ChildItemInfo}  content-desc
     ${info} =  Replace String	${info}  \n  ${space}
@@ -176,6 +178,7 @@ MPST01_09_HappyPath
 
     Add New Income For Zero Dollars By Price Catogory And ChildMember Using +
     Click Expend
+    Wait Until Page Contains Element    ${ChildItemInfo}
     Wait Until Element Is Visible    ${ChildItemInfo}
     ${info} =  Get Element Attribute  ${ChildItemInfo}  content-desc
     ${info} =  Replace String	${info}  \n  ${space}
@@ -187,6 +190,7 @@ MPST01_09_HappyPath
 
     Add New Income For Negative Dollars By Price Catogory And ChildMember Using -
     Click Expend
+    Wait Until Page Contains Element    ${ChildItemInfo}
     Wait Until Element Is Visible    ${ChildItemInfo}
     ${info} =  Get Element Attribute  ${ChildItemInfo}  content-desc
     ${info} =  Replace String	${info}  \n  ${space}
@@ -198,6 +202,7 @@ MPST01_09_HappyPath
 
     Add New Income For 900 Dollars By Price Catogory And ChildMember Using *
     Click Expend
+    Wait Until Page Contains Element    ${ChildItemInfo}
     Wait Until Element Is Visible    ${ChildItemInfo}
     ${info} =  Get Element Attribute  ${ChildItemInfo}  content-desc
     ${info} =  Replace String	${info}  \n  ${space}
@@ -209,6 +214,7 @@ MPST01_09_HappyPath
 
     Add New Income For 12.5 Float Dollars By Price Catogory And ChildMember Using /
     Click Expend
+    Wait Until Page Contains Element    ${ChildItemInfo}
     Wait Until Element Is Visible    ${ChildItemInfo}
     ${info} =  Get Element Attribute  ${ChildItemInfo}  content-desc
     ${info} =  Replace String	${info}  \n  ${space}
@@ -220,6 +226,7 @@ MPST01_09_HappyPath
 
     Add New Income For -0.5 Negative Float Dollars By Default Catogory And ChildMember
     Click Expend
+    Wait Until Page Contains Element    ${ChildItemInfo}
     Wait Until Element Is Visible    ${ChildItemInfo}
     ${info} =  Get Element Attribute  ${ChildItemInfo}  content-desc
     ${info} =  Replace String	${info}  \n  ${space}
@@ -231,6 +238,7 @@ MPST01_09_HappyPath
 
     Add New Income For Zero Float Dollars By Default Catogory And ChildMember
     Click Expend
+    Wait Until Page Contains Element    ${ChildItemInfo}
     Wait Until Element Is Visible    ${ChildItemInfo}
     ${info} =  Get Element Attribute  ${ChildItemInfo}  content-desc
     ${info} =  Replace String	${info}  \n  ${space}
